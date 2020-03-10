@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
+
+import external.GitHubClient;
+
 import org.json.JSONArray;
 
 /**
@@ -47,6 +50,13 @@ public class SearchItem extends HttpServlet {
 		array.put(new JSONObject().put("username", "abcd"));
 		array.put(new JSONObject().put("username", "1234"));
 		writer.print(array);
+		
+		double lat = Double.parseDouble(request.getParameter("lat"));
+		double lon = Double.parseDouble(request.getParameter("lon"));
+
+		GitHubClient client = new GitHubClient();
+		RpcHelper.writeJSONArray(response, client.search(lat, lon, null));
+
 
 	}
 
