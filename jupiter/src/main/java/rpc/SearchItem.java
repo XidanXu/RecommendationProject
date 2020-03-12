@@ -43,13 +43,13 @@ public class SearchItem extends HttpServlet {
 		 * writer.print(obj); }
 		 */
 		
-		response.setContentType("application/json");
-		PrintWriter writer = response.getWriter();
+//		response.setContentType("application/json");
+//		PrintWriter writer = response.getWriter();
 		
-		JSONArray array = new JSONArray();
-		array.put(new JSONObject().put("username", "abcd"));
-		array.put(new JSONObject().put("username", "1234"));
-		writer.print(array);
+//		JSONArray array = new JSONArray();
+//		array.put(new JSONObject().put("username", "abcd"));
+//		array.put(new JSONObject().put("username", "1234"));
+//		writer.print(array);
 		
 		double lat = Double.parseDouble(request.getParameter("lat"));
 		double lon = Double.parseDouble(request.getParameter("lon"));
