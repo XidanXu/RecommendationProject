@@ -90,7 +90,7 @@ public class Item {
 			this.keywords = keywords;
 		}
 		
-		public Item builder() {
+		public Item build() {
 			return new Item(this);
 		}
 	}
